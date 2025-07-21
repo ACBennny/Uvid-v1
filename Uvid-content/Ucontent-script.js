@@ -79,7 +79,7 @@
         }
         else
         {
-            window.open(URL="/Users/user/Desktop/html/Uvid/Uvid.html", target="_top");
+            window.open(URL="/Uvid.html", target="_top");
         }
     }
     backtohome1.onclick = () => {
@@ -89,7 +89,7 @@
         }
         else
         {
-            window.open(URL="/Users/user/Desktop/html/Uvid/Uvid.html", target="_top");
+            window.open(URL="/Uvid.html", target="_top");
         }
     }
 
