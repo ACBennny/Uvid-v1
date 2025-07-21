@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Uvid</title>
+	<link rel="stylesheet" type="text/css" href="Uvid-style.css">
+	<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://kit.fontawesome.com/d4a2a13e8e.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="">
+        
+
+        <!-- preloader -->
+        <div id="preloader">
+            <div id="spinner"></div>
+        </div>
+
+        <!-- cover -->
+        <div class="cover">
+            <!-- <img src="EU-img/cover.jpg" alt=""> -->
+            <div class="chead">
+                <h1 class="ch1">U</h1>
+                <h1 class="ch2">U</h1>
+                <h1 class="ch3">U</h1>
+            </div>
+            <div class="ctext" onclick="opengates()">
+                <button>Let's begin</button>
+            </div>
+        </div>
+
+         <!--create acc first -->
+         <div class="prmptlog">
+            
+            <!-- ---create account page--- -->
+            <div class="reg-bf">
+                <div class="seeh">
+                    <div class="seeh1">
+                        <div class="chead">
+                            <h1 class="ch1 logview1">U</h1>
+                            <h1 class="ch2 logview2">U</h1>
+                            <h1 class="ch3 logview3">U</h1>
+                        </div>
+                        <div class="aboutme">
+                            <p>Every genre you can think of.. we got it</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lsform">
+                    <div class="lstog">
+                        <div class="lsbut">
+                            <h2>Sign Up</h2>
+                            <h2 class="lsactive">Sign In</h2>
+                        </div>
+                        <div class="formbx">
+                            <div class="fbx">
+                                <!-- contains element of the style form -->
+                                <div class="formtog signform">
+                                    <h3 id="top1">Create an account</h3>
+                                    <br>
+                                    <p>Username</p>
+                                    <input type="text" name="" id="uname" placeholder="do not use your real name">
+                                    <p>Password</p>
+                                    <input type="password" name="" id="upass" placeholder="enter a strong password">
+                                    <p>Confirm Password</p>
+                                    <input type="password" name="" id="ucfmpass" placeholder="re-enter your password">
+                                    <p>Enter a recovery email <i class="fa-solid fa-question-circle" title="Ensure your email is valid and operating"></i></p>
+                                    <input type="email" name="" id="umail" placeholder="ensure your email is active">
+                                    <br>
+                                    <p>
+                                        <span style=" column-gap: 5px; text-align:left;">
+                                            <input type="checkbox" id="chbx" style=" height: 15px; width: 15px; cursor: pointer;">
+                                            By ticking this, I agree to the
+                                            <br>
+                                            <a href="Uvid-tc.html" target="_blank" rel="no-referrer" style=" color: #087d1e;"><span>"terms and conditions"</span></a>
+                                        </span>
+                                        
+                                    </p>
+                                    <br>
+                                    <button type="submit" class="crttog" id="sgnsubmit">Create</button>
+                                    <br>
+                                    <p>Aready have an account?
+                                        <br>
+                                        <u class="log">Sign In</u>
+                                    </p>
+                                    <br>
+                                    <a href="#top1"><i class="fa-solid fa-arrow-up-from-bracket totop" title="to the top"></i></a>
+                                </div>
+                                <!-- this appears over the signform to prevent users from going back there -->
+                                <div class="formtog rfrshfrm">
+                                    <p id="toprfr">
+                                        Section unavailable
+                                        <br>
+                                        Refresh to clear
+                                    </p>
+                                    <a href="#toprfr"><i class="fa-solid fa-arrow-up-from-bracket totop" title="to the top"></i></a>
+                                </div>
+                                <div class="formtog logform">
+                                    <h3 id="top2">Sign into your Account</h3>
+                                    <p>Username</p>
+                                    <input type="text" name="" id="usrlog" placeholder="enter your username" value="Hit the Sign In button">
+                                    <p>Password</p>
+                                    <input type="password" name="" id="usrpass" placeholder="enter your password" value="Hit the Sign In button">
+                                    <br>
+                                    <button type="submit" id="logsubmit">Sign In</button>
+                                    <br>
+                                    <p>Forgot password?
+                                        <br>
+                                        <u class="retnw">Reset it Now</u>
+                                    </p>
+                                    <!-- <br> -->
+                                    <p>Don't have an account?
+                                        <br>
+                                        <u class="sgn">Sign Up</u>
+                                    </p>
+                                    <br>
+                                    <a href="#top2"><i class="fa-solid fa-arrow-up-from-bracket totop" title="to the top"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- this is a popup for a user successfully creating their account -->
+        <div class="recbase0">
+            <div class="formtog recoveracc">
+                <h3>Your account has been created successfully
+                    <br>
+                    Now log into your newly created account
+                    <br>
+                    Press the "Log In" button to be automatically logged in.
+                </h3>
+                <br>
+                <button type="submit" id="cotn">continue</button>
+            </div>
+        </div>
+
+        <!-- this is a popup that requests for user's email if they cant log in -->
+        <div class="recbase1">
+            <div class="formtog recoveracc">
+                <i class="fa-solid fa-xmark-circle re1"></i>
+                <h3>Type in your email to recover your account</h3>
+                <input type="email" placeholder="ensure your email is correct">
+                <button type="submit" id="sendcde">Send code</button>
+            </div>
+        </div>
+        <!-- this comes up to let user know a code has been sent and requests they type it in -->
+        <div class="recbase2">
+            <div class="formtog recoveracc">
+                <i class="fa-solid fa-xmark-circle"></i>
+                <h3>A verification code has been sent to this email</h3>
+                <br>
+                <p>Enter the verification code</p>
+                <input type="text" placeholder="click to type">
+                <button type="submit" id="valcde">Recover</button>
+            </div>
+        </div>
+
+        <!-- this popups if a user's credentials are correct -->
+        <div class="recbase3">
+            <div class="formtog recoveracc">
+                <h3>Log in successfull</h3>
+                <br>
+                <button type="submit" id="confm">close</button>
+            </div>
+        </div>
+        <!-- this popups if a user's credentials are NOT correct -->
+        <div class="recbase4">
+            <div class="formtog recoveracc">
+                <h3>Incorrect username or password</h3>
+                <p><i class="fa-solid fa-info-circle"></i> : Ensure you have an account
+                    <br>
+                    Press the "Log In" button to be automatically logged in.
+                </p>
+                <br>
+                <button type="submit" id="xuser">close</button>
+            </div>
+        </div>
+
+        <!-- this popups if user doesnt meet conditions for creating an account -->
+        <div class="recbase5">
+            <div class="errocreate">
+                <div class="formtog">
+                    <h3>Error</h3>
+                    <br>
+                    <p>
+                        It seems you may not have met all the conditions for account creation listed below;
+                        <br><br>
+                        1.  Username must be minimun of '5' characters but 
+                            not more than '20' characters.
+                            <br><br>
+                        2.  Password must be minimun of '8' characters but 
+                            not more than '100' characters.
+                            <br><br>
+                        3.  Password must be the same for "Confirm password".
+                            <br><br>
+                        4.  You must have a valid email as this is the only way to recover your account if any issues arise.
+                    </p>
+                    <br><br>
+                    <button type="submit" id="xcrte">close</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- gate -->
+        <div class="gnull g1">
+            <h1 class="gch1 gh1" style="color: #fff; transform: rotate(90deg);">U</h1>
+            <h1 class="gch2 gh1" style="color: #000; transform: rotate(0deg);">U</h1>
+            <h1 class="gch3 gh1" style="color: #fff; transform: rotate(90deg);">U</h1>
+        </div> 
+        <div class="gnull g2">
+            <h1 class="gch4 gh1" style="color: #fff; transform: rotate(270deg);">U</h1>
+            <h1 class="gch5 gh1" style="color: #000; transform: rotate(180deg);">U</h1>
+            <h1 class="gch6 gh1" style="color: #fff; transform: rotate(270deg);">U</h1>
+        </div>
+
+        <!-- choice of intersted shows -->
+        <div class="gnr">
+            <div class="genre">
+                <div class="cthead">Have a favourite genre?</div>
+                <div class="ctext">
+                    <button id="fz1" onclick="f1()">Live Action</button>
+                </div>
+                <div class="ctext">
+                    <button id="fz2" onclick="f2()">Documentaries</button>
+                </div>
+                <div class="ctext">
+                    <button id="fz3" onclick="f3()">TV Show</button>
+                </div>
+                <div class="ctext">
+                    <button id="fz4" onclick="f4()">Anime</button>
+                </div>
+                <div class="ctext">
+                    <button id="fz5" onclick="f5()">Cartoons</button>
+                </div>
+                <div class="ctext">
+                    <button id="fz6" onclick="f6()">Other</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- home screen -->
+        <div class="home">
+            <!-- navbar -->
+            <div class="navbar">
+                <div class="panel">
+                    <div class="pan2">
+                        <button class="pmen"  id="p0" onclick="valo()">
+                            <i class="fa-solid fa-magnifying-glass" id="hh"></i>
+                        </button>
+                        <div class="psrch" id="uu">
+                            <div class="srchbar">
+                                <input type="search" class="search" id="search" placeholder="search anything">
+                            </div>
+                            <div class="suggsrch">
+                                <i class="fa-solid fa-xmark" id="vv" onclick="vale()"></i>
+                                <h3>Suggested searches</h3>
+                                <div class="suggopt">
+                                    <p><span>&#8594;&nbsp;</span>Spiderman through the spider verse<span>&nbsp;&#8592;</span></p>
+                                    <p><span>&#8594;&nbsp;</span>Barbie<span>&nbsp;&#8592;</span></p>
+                                    <p><span>&#8594;&nbsp;</span>Blue Beetle<span>&nbsp;&#8592;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="pmen">
+                            <i class="fa-solid fa-bars-staggered" id="p1"></i>
+                        </button>
+                            <div class="langsel p1">
+                                <h3 class="openprem frmenu" id="abt">Premium Membership</h3>
+                                <h3 class="frmenu" id="plyl">My Shows</h3>
+                                <h3 class="frmenu" id="dp">Profile</h3>
+                                <h3 class="frmenu" id="sett"><i class="fa-solid fa-cogs"></i></h3>
+                            </div>
+                        <button class="pmen">
+                            <i class="fa-solid fa-info-circle" id="p2"></i>
+                        </button>
+                            <div class="langsel p2">
+                                <h3 class="frmenu" id="qta">About Us</h3>
+                                <h3 class="frmenu" id="prem">Support Us</h3>
+                                <h3 class="frmenu" id="tnc">Terms and Conditions</h3>
+                                <h3 class="frmenu" id="qta"><i class="fa-solid fa-question"></i></h3>
+                            </div>
+                        <!-- <button class="pmen">
+                            <i class="fa-solid fa-house homepage"></i>
+                        </button> -->
+                        
+                    </div>
+                    <button class="pan2a" onclick="opnav()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-left"></i></button>
+                </div>
+                <div class="aboutme hideabtme">
+                    <p>Every genre you can think of.. we got it
+                    </p>
+                </div>
+                <div class="logo">
+                    <h1 class="lhead">U</h1>
+                    <h1 class="lname">vid</h1>
+                </div>
+            </div>
+
+            <!-- desktop -->
+            <div class="area">
+                <div class="area1">
+                    <div class="anull">
+                        <div class="sub s1">
+                            <div class="subhd">TV</div>
+                            <div class="animg">
+                                <img src="Uvid-img/8.jpg" alt="">
+                                <img src="Uvid-img/14.jpg" alt="">
+                                <img src="Uvid-img/15.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="sub s2">
+                            <div class="subhd">Movies</div>
+                            <div class="animg">
+                                <img src="Uvid-img/1.jpg" alt="">
+                                <img src="Uvid-img/2.jpg" alt="">
+                                <img src="Uvid-img/23.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="sub s3">
+                            <div class="subhd">Documentaries</div>
+                            <div class="animg">
+                                <img src="Uvid-img/20.jpg" alt="">
+                                <img src="Uvid-img/21.jpg" alt="">
+                                <img src="Uvid-img/22.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="anull">
+                        <div class="sub s4">
+                            <div class="subhd">Anime</div>
+                            <div class="animg">
+                                <img src="Uvid-img/17.jpg" alt="">
+                                <img src="Uvid-img/18.jpg" alt="">
+                                <img src="Uvid-img/19.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="sub s5">
+                            <div class="subhd">Cartoon</div>
+                            <div class="animg">
+                                <img src="Uvid-img/5.jpg" alt="">
+                                <img src="Uvid-img/6.jpg" alt="">
+                                <img src="Uvid-img/7.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="sub s6 sdiv">
+                            <div class="sd sd0">
+                                <div class="subhd">News</div>
+                                <img src="Uvid-img/24.jpg" alt="">
+                            </div>
+                            <div class="sd sd1">
+                                <div class="sdsub sd2">
+                                    <div class="subhd">Upcoming</div>
+                                    <img src="Uvid-img/3.jpg" alt="">
+                                </div>
+                                <div class="sdsub sd3">
+                                    <div class="subhd">Latest</div>
+                                    <img src="Uvid-img/4.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+           
+
+            <!-- side-panel(s) -->
+            <div class="menform buyprem">
+                <div class="menform1">
+                    <div class="menform2">
+                        <div class="menform2a">
+                            <i class="fa-solid fa-xmark xhlpform" id="xhlpform"></i>
+                            <h1>PREMIUM</h1>
+                            <p>Become a premium member and get access to exclusive perks</p>
+                        </div>
+                        <div class="prembody">
+                            
+                            <div class="premcontent">
+                                <input type="radio" name="r" id="r1" checked>
+                                <input type="radio" name="r" id="r2">
+                                <div class="premslide pslide1">
+                                    <div class="prembase">
+                                        <div class="prembase1"></div>
+                                        <div class="prembase2"></div>
+                                        <div class="prembase3">
+                                            <div class="prem1a">$2.99</div>
+                                            <div class="prem1b">
+                                                <h2>Premium</h2>
+                                                <br>
+                                                <p>
+                                                    Get exclusive benefits on our various contents contents
+                                                    <br>
+                                                    <span id="pmoreinfo" title="All you need to know about this package"
+                                                    onclick="pmoreinfo.addEventListener('click', () =>{
+                                                        let we0 = document.getElementById('we');
+                                                        we0.classList.add('baseactv');
+                                                    })">learn more</span>
+                                                </p>
+                                                <div class="btn-to-buy">
+                                                    <div class="formtog">
+                                                        <button class=" buymnthprem">GET IT NOW</button>
+                                                    </div>
+                                                </div>
+                                                <div class="moreinfobase" id="we">
+                                                    <div class="moreinfos1">
+                                                        <div class="moreinfosub1">
+                                                            More Info
+                                                        </div>
+                                                        <div class="moreinfosub2">
+                                                            <p><span class="spn1">Duration</span><span class="spn2">One month</span></p>
+                                                            <p><span class="spn1">Badge</span><span class="spn2">Premium</span></p>
+                                                            <p><span class="spn1">Stream time</span><span class="spn2">72hrs weekly</span></p>
+                                                            <p><span class="spn1">Show availability</span><span class="spn2">specified</span></p>
+                                                            <p><span class="spn1">Upcoming shows</span><span class="spn2">Yes</span></p>
+                                                            <p><span class="spn1">Edit Username</span><span class="spn2">Yes</span></p>
+                                                            <p><span class="spn1">Edit Background</span><span class="spn2">Yes</span></p>
+                                                            <p><span class="spn1">Downloads</span><span class="spn2">10 per day</span></p>
+                                                            <p><span class="spn1">Watch Later</span><span class="spn2">Yes</span></p>
+                                                            <p><span class="spn1">Playlist</span><span class="spn2">5 max</span></p>
+                                                            <p><span class="spn1">Favourites</span><span class="spn2">Yes</span></p>
+                                                            <div class="moreinfosub3 sub3a">
+                                                                <div class="formtog">
+                                                                    <button id="lessinfo0a" onclick="lessinfo0a.addEventListener('click', () =>{
+                                                                        let we0a = document.getElementById('we');
+                                                                        we0a.classList.remove('baseactv');
+                                                                    })">close</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="moreinfosub3 sub3b">
+                                                            <div class="formtog">
+                                                                <button id="lessinfo0b" onclick="lessinfo0b.addEventListener('click', () =>{
+                                                                    let we0b = document.getElementById('we');
+                                                                    we0b.classList.remove('baseactv');
+                                                                })">close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="premslide pslide2">
+                                    <div class="prembase">
+                                        <div class="prembase1"></div>
+                                        <div class="prembase2"></div>
+                                        <div class="prembase3">
+                                            <div class="prem1a">$4.99</div>
+                                            <div class="prem1b">
+                                                <h2>Premium plus *Recommended*</h2>
+                                                <br>
+                                                <p>
+                                                    Unlimited streams, downloads and much more
+                                                    <br>
+                                                    <span id="pmoreinfo1" title="All you need to know about this package"
+                                                    onclick="pmoreinfo1.addEventListener('click', () =>{
+                                                        let we1 = document.getElementById('we1');
+                                                        we1.classList.add('baseactv');
+                                                    })">learn more</span>
+                                                </p>
+                                                <div class="btn-to-buy">
+                                                    <div class="formtog">
+                                                        <button class="formtog buymnthprem">GET IT NOW</button>
+                                                    </div>
+                                                </div>
+                                                <div class="moreinfobase" id="we1">
+                                                    <div class="moreinfos1">
+                                                        <div class="moreinfosub1">
+                                                            More Info
+                                                        </div>
+                                                        <div class="moreinfosub2">
+                                                            <p><span class="spn1">Duration</span><span class="spn2">One month</span></p>
+                                                            <p><span class="spn1">Badge</span><span class="spn2">Premium plus</span></p>
+                                                            <p><span class="spn1">Stream time</span><span class="spn2">Unlimited</span></p>
+                                                            <p><span class="spn1">Show availability</span><span class="spn2">All</span></p>
+                                                            <p><span class="spn1">Upcoming shows</span><span class="spn2">Yes</span></p>
+                                                            <p><span class="spn1">Edit Username</span><span class="spn2">Yes</span></p>
+                                                            <p><span class="spn1">Edit Background</span><span class="spn2">Yes</span></p>
+                                                            <p><span class="spn1">Watch Later</span><span class="spn2">Yes</span></p>
+                                                            <p><span class="spn1">Favourites</span><span class="spn2">Yes</span></p>
+                                                            <p><span class="spn1">Playlist</span><span class="spn2">Unlimited</span></p>
+                                                            <p><span class="spn1">Downloads</span><span class="spn2">Unlimited</span></p>
+                                                            <div class="moreinfosub3 sub3a">
+                                                                <div class="formtog">
+                                                                    <button id="lessinfo1a" onclick="lessinfo1a.addEventListener('click', () =>{
+                                                                        let we1a = document.getElementById('we1');
+                                                                        we1a.classList.remove('baseactv');
+                                                                    })">close</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="moreinfosub3 sub3b">
+                                                            <div class="formtog">
+                                                                <button id="lessinfo1b" onclick="lessinfo1b.addEventListener('click', () =>{
+                                                                    let we1b = document.getElementById('we1');
+                                                                    we1b.classList.remove('baseactv');
+                                                                })">close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="show-nav-btn">
+                                <label for="r1" class="prem-slide-btn" id="slideTo1">
+                                    <i class="fa-solid fa-caret-left"></i>
+                                </label>
+                                <label for="r2" class="prem-slide-btn" id="slideTo2">
+                                    <i class="fa-solid fa-caret-right"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menform myshow">
+                <div class="menform1">
+                    <div class="menform2">
+                        <div class="menform2a">
+                            <i class="fa-solid fa-xmark xhlpform" id="xhlpform"></i>
+                            <!-- <h1>My Shows</h1>
+                            <p>Playlists, saved, downloads and more</p> -->
+                        </div>
+                        <div class="scebx">
+                            <div class="sce">
+                                <div class="schead">
+                                    <h2>Recently Watched</h2>
+                                </div>
+                                <div class="scbody sce1">
+                                    recently watched shows will appear here
+                                </div>
+                                <div class="scxpand">
+                                    <p id="xpd1"><i class="fa-solid fa-caret-down"></i></p>
+                                </div>
+                            </div>
+                            <div class="sce">
+                                <div class="schead">
+                                    <h2>Get Premium to gain access to these features</h2>
+                                </div>
+                                <div class="scbody sce2">
+                                    <span style=" color: #dbdbdb;">&#8594; Watch Later</span>
+                                    <span style=" color: #dbdbdb;">&#8594; Favourites</span>
+                                    <span style=" color: #dbdbdb;">&#8594; Playlists</span>
+                                    <span style=" color: #dbdbdb;">&#8594; Downloads</span>
+                                    <div class="formtog" style=" width: 100%;">
+                                        <form action="">
+                                            <button><a href="Uvid-Premium.html" target="_blank">BUY NOW</a></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="scxpand">
+                                    <p id="xpd2"><i class="fa-solid fa-caret-down"></i></p>
+                                </div>
+                            </div>
+                            <div class="sce premsce">
+                                <div class="schead">
+                                    <h2>Watch Later</h2>
+                                </div>
+                                <div class="scbody sce2">
+                                    Shows planned for later will appear here
+                                </div>
+                                <div class="scxpand">
+                                    <p id="xpd2"><i class="fa-solid fa-caret-down"></i></p>
+                                </div>
+                            </div>
+                            <div class="sce premsce">
+                                <div class="schead">
+                                    <h2>Favourites</h2>
+                                </div>
+                                <div class="scbody sce3">
+                                    Here lies all your favourite shows
+                                </div>
+                                <div class="scxpand">
+                                    <p id="xpd3"><i class="fa-solid fa-caret-down"></i></p>
+                                </div>
+                            </div>
+                            <div class="sce premsce">
+                                <div class="schead">
+                                    <h2>Playlists</h2>
+                                </div>
+                                <div class="scbody sce4">
+                                    Create and customize your playlists
+                                </div>
+                                <div class="scxpand">
+                                    <p id="xpd4"><i class="fa-solid fa-caret-down"></i></p>
+                                </div>
+                            </div>
+                            <div class="sce premsce">
+                                <div class="schead">
+                                    <h2>Downloads</h2>
+                                </div>
+                                <div class="scbody sce5">
+                                    All downloaded shows will appear here
+                                </div>
+                                <div class="scxpand">
+                                    <p id="xpd5"><i class="fa-solid fa-caret-down"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menform profile">
+                <div class="menform1">
+                    <div class="menform2 men2profile">
+                        <div class="menform2a">
+                            <i class="fa-solid fa-xmark xhlpform" id="xhlpform"></i>
+                            <!-- <h1>Profile</h1>
+                            <p>See all details of your membership</p> -->
+                        </div>
+                        <div class="profilebx">
+                            <div class="profilehd">
+                                <img src="Uvid-img/26.jpg" alt="" class="backgrdpicture">
+                                <div class="profilehdblur">
+                                    <div class="profiledp">
+                                        <img src="Uvid-img/27.png" alt="" class="profiledpimg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profilebody">
+                                <div class="profilebody1">
+                                    <i class="fa-solid fa-bars" onclick="profilemenu()"></i>
+                                        <p class="proftxthd" id="txthd1">Username<span id="txtcnt1">unavailable</span></p>
+                                        <p class="proftxthd" id="txthd2">Email<span id="txtcnt2">unavailable</span></p>
+                                        <p class="proftxthd" id="txthd3">Password<span id="txtcnt3">****************</span></p>
+                                        <p class="proftxthd" id="txthd4">Account type<span id="txtcnt4">Regular</span></p>
+                                        <p class="proftxthd" id="txthd5">Favourite genres<span id="txtcnt5">not available</span></p>
+                                        <p class="proftxthd" id="txthd6">Date joined<span id="txtcnt6">2023</span></p>
+                                </div>
+                                <div class="recbase6">
+                                    <div class="formtog profform">
+                                        <div class="optlist">
+                                            <i class="fa-solid fa-xmark-circle" onclick="profilemenu()"></i>
+                                            <br>
+                                            <h2 class="optbutn1">Update Username</h2>
+                                                <div class="profchng chngusrnom">
+                                                    <h3>Purchase premium to change user name</h3>
+                                                    <br>
+                                                    <button><a href="Uvid-Premium.html" target="_blank">BUY NOW</a></button>
+                                                </div>
+                                                <div class="profchng chngusrnom" style=" display: none;">
+                                                    <form action="" class="updpass">
+                                                        <p>New username</p>
+                                                        <input type="email">
+                                                        <br>
+                                                        <p>Password</p>
+                                                        <input type="password">
+                                                        <br><br>
+                                                    <button type="submit">Update</button>
+                                                    </form>
+                                                </div>
+                                            <h2 class="optbutn2">Update Email</h2>
+                                                <div class="profchng chngusrmail">
+                                                    <form action="" class="updpass">
+                                                        <p>New email</p>
+                                                        <input type="email">
+                                                        <br>
+                                                        <p>Password</p>
+                                                        <input type="password">
+                                                        <br><br>
+                                                    <button type="submit">Update</button>
+                                                    </form>
+                                                </div>
+                                            <h2 class="optbutn3">Update Password</h2>
+                                                <div class="profchng chngusrpass">
+                                                    <form action="" class="updpass">
+                                                        <p>Current Password</p>
+                                                        <input type="password" class="" id="">
+                                                        <br>
+                                                        <p>New Password</p>
+                                                        <input type="password" class="" id="">
+                                                        <br>
+                                                        <p>Confirm Password</p>
+                                                        <input type="password" class="" id="">
+                                                        <br><br>
+                                                        <button type="submit">Update</button>
+                                                    </form>
+                                                </div>
+                                            <h2 class="optbutn4">Picture</h2>
+                                                <div class="profchng chngpicfore">
+                                                    <button><label for="forepic" class="picselect foregrdpic">Change</label></button>
+                                                    <button id="profforereset">Remove</button>
+                                                    <input style=" display: none;" type="file" class="" name="" id="forepic">
+                                                </div>
+                                            <h2 class="optbutn5">Background</h2>
+                                                <div class="profchng chngpicback">
+                                                    <h3>Purchase premium to change Background</h3>
+                                                    <br>
+                                                    <button><a href="Uvid-Premium.html" target="_blank">BUY NOW</a></button>
+                                                </div>
+                                                <div class="profchng chngpicback" style="display: none;">
+                                                    <button><label for="backpic" class="picselect backgrdpic">Change</label></button>
+                                                    <button id="profbcgreset">Remove</button>
+                                                    <input style=" display: none;" type="file" class="" name="" id="backpic">
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menform setting">
+                <div class="menform1">
+                    <div class="menform2">
+                        <div class="menform2a">
+                            <i class="fa-solid fa-xmark xhlpform" id="xsettform"></i>
+                            <h1>Settings</h1>
+                            <p>Customize your experience</p>
+                        </div>
+                        <div class="settfrm">
+                            <h3>
+                                Volume
+                                <div class="vol">
+                                    <select type="number">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </h3>
+                            <h3>
+                                Brightness
+                                <div class="bright">
+                                    <input type="range" min="0" max="100" value="10">
+                                </div>
+                            </h3>
+                            <div class="font">
+                                <h3>Font</h3>
+                                <div class="catbx0">
+                                    <div class="catvis0">
+                                        <span id="cattitle0">Select a font</span>
+                                        <i class="fa-solid fa-caret-down rtd0"></i>
+                                    </div>
+                                    <div class="catopt0">
+                                        <div class="catslide">
+                                            <div class="cgy cga" id="cgy5">
+                                                <p>Default</p>
+                                            </div>
+                                            <div class="cgy cgb" id="cgy6">
+                                                <p>Arial</p>
+                                            </div>
+                                            <div class="cgy cga" id="cgy7">
+                                                <p>Times New Roman</p>
+                                            </div>
+                                            <div class="cgy cgb" id="cgy8">
+                                                <p>Bahnschrift Light</p>
+                                            </div>
+                                            <div class="cgy cgb" id="cgy9">
+                                                <p>San serif</p>
+                                            </div>
+                                            <div class="cgy cgb" id="cgy10">
+                                                <p>Bauhaus 93</p>
+                                            </div>
+                                            <div class="cgy cgb" id="cgy11">
+                                                <p>Calibri</p>
+                                            </div>
+                                            <div class="cgy cgb" id="cgy12">
+                                                <p>Poppins</p>
+                                            </div>
+                                            <div class="cgy cgb" id="cgy13">
+                                                <p>Agency FB</p>
+                                            </div>
+                                            <div class="cgy cgb" id="cgy14">
+                                                <p>Brush Script MT</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <h3>
+                                Theme
+                                <div class="vol">
+                                    <select type="number">
+                                        <option value="1">Dark</option>
+                                        <option value="2">White</option>
+                                    </select>
+                                </div>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menform abtpus">
+                <div class="menform1">
+                    <div class="menform2">
+                        <div class="menform2a">
+                            <i class="fa-solid fa-xmark xhlpform" id="xhlpform"></i>
+                            <h1>About Us</h1>
+                            <p>All you need to know about us</p>
+                        </div>
+                        <div class="abt">
+                            My name is <a href="https://www.roblox.com/users/1782528468/profile" target="_blank">crashinvestigator</a>. I am a <a href="https://www.roblox.com" target="_blank">Roblox</a> 
+					        member.
+                            <br>
+                            This website is developed and managed by my virtual company; _CRASH~STUDIOS_
+                            <br><br>
+                            I am currently stil trying to expand my knowledge of web design. Thus, the creation of this website. It is one of the projects I embarked on and decided to share to the world.
+                            <br>
+                            I dont expect it to become as great as netflix or prime videos as I am not in for the competition. When I'm ready, I'll take them down.
+                            <br><br>
+                            This website; <strong>Uvid</strong> is a streaming website that provides users the opportunity to to watch various series, movies, shows etcetera.
+                            We aim to cover all the depths (if not, as much as possible) of varieties of choices for everyone to watch.
+                            <br>
+                            Our motto: <span style="font-style: italic;"><strong>Every genre you can think of..we got it</strong></span> is our never ending goal.
+                            <br><br>
+                            The website is still in it's development phase and contents currently available may not be of great magnitude. Please be patient with us as we strive to serve you better
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menform suppus">
+                <div class="menform1">
+                    <div class="menform2">
+                        <div class="menform2a">
+                            <i class="fa-solid fa-xmark xhlpform" id="xhlpform"></i>
+                            <h1>Support Us</h1>
+                            <p>Love what we do? Then drop a tip</p>
+                        </div>
+                        <div class="supbcg">
+                            <div class="suppic">
+                                <img src="Uvid-img/31.jpg" alt="">
+                            </div>
+                            <div class="supmes">
+                                <p>
+                                    It's not easy to do what we do. Most especially, at such low costs.
+                                    <br><br>
+                                    We therefore encourage you out of your own free will to kindly drop something for us. 
+                                    <br>
+                                    This will surely aid us in serving you better.
+                                    <br><br>
+                                    Also, users who donate up to <span style=" color: #207d18;">$50</span> dollars will obtain the donators badge.
+                                    <br>
+                                    <a href="Uvid-Payment.html" target="_blank"><button class="suprtnw">SUPPORT</button></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menform tandc">
+                <div class="menform1">
+                    <div class="menform2">
+                        <div class="menform2a">
+                            <i class="fa-solid fa-xmark xhlpform" id="xhlpform"></i>
+                            <h1>Terms and Conditions</h1>
+                            <p>Please endeavor to respect them</p>
+                        </div>
+                        <div class="tccon" style="color: #fff;">
+                            <ul style="text-decoration: none; list-style: none; list-style-type: none;">
+                                <li>1. This website was created to provide you with varieties of shows for possibly every genre and to satisfy the undying diversity in interests</li>
+                                <br>
+                                <li>2. The content posted on this platform ARE NOT MANUFACTURED by us but sourced externally.</li>
+                                <br>
+                                <li>3. We do not and will never claim rights to content(s) posted on this platform that are not manufactured by us. All credits go to whoever may have created them and/or to its source of origin</li>
+                                <br>
+                                <li>4. Do not hesitate to <span class="redct" style="color: #1a5c17;">contact us</span> if you wish to be credited properly</li>
+                                <br>
+                                <li>5. If you wish for a content to be removed, let us know immediately with appropriate means of identification and documentation</li>
+                                <br>
+                                <li>6. Any content created by us will be stated thoroughly</li>
+                                <br>
+                                <li>7. To avoid false honouring/referrals, content whose creator or source of origin cannot be verified will not be credited.
+                                    The credits still go to them (not us), only there will be no link/ means of referral to the content creators until verified
+                                </li>
+                                <br>
+                                <li>8. The content posted on this website may contain some level(s) of violence, informal/offensive language, explosions, destructions, nudity, romantic/sexual behaviors, fights, gore, death, killings etcetera and/or terms related to the aforementioned.
+                                    Parents/Guardians are advised to exercise control over what their children/ward(s) are watching.
+                                </li>
+                                <br>
+                                <li>9. We do not host and will never host any form of pornography or pornographic related content on our website.
+                                    In regard to the statement above, we would still recommend parental control on their child/wards use of our website.
+                                </li>
+                                <br>
+                                <li>Content hosted on this platform are only made to serve as a source of entertainment and Information</li>
+                                <br>
+                                <li>10. The content hosted on this platform are not made to be undermine, or degrade any form of social identities, groups, policies, beliefs, morals, ideas, values etcetera.
+                                    If you are personally offended by any content, you are free to report it to us and if your reasons are deemed reasonable to a certain margin, the contents may be removed. 
+                                    Otherwise, you are free to stop watching or making use of our website
+                                </li>
+                                <br>
+                                <li>11. Not all shows are available for members. To watch these shows, you will be required to upgrade to premium membership.
+                                    All details regarding upgrade are stated in the "<span class="redct" style="color: #1a5c17;">Premium</span>" tab
+                                </li>
+                                <br>
+                                <li>12. Asides upgrade to premium membership, there is NO OTHER REQUEST for you to pay before you gain access to our content.
+                                    Beware of any personnel(s), companies or organisations demanding any other payments. These are scams.
+                                </li>
+                                <br>
+                                <li>13. The only other interaction involving money is DONATIONS. This is not a compulsory action and should be done out of free will. We will always appreciate any DONATIONS.</li>
+                                <br>
+                                <li>14. Payments are ONLY made through paypal at this point in time; which is on our website.
+                                    Take precaution not to make payments or enter private info on external sites.
+                                </li>
+                                <br>
+                                <li>15. This website is still in development and bugs may occur. Kindly report it to have it resolved in good time</li>
+                                <br>
+                                <li>16. Our terms and conditions are not final and are subject to change</li>
+                                <br><br>
+                                <a href="Uvid-tc-dwld.pdf" target="_blank" style="color: #3da86d;" download="">Click <span>"here"</span> to download a copy of our Usage Terms</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menform helpme">
+               <div class="menform1">
+                    <div class="menform2">
+                        <div class="menform2a">
+                            <i class="fa-solid fa-xmark xhlpform" id="xhlpform"></i>
+                            <h1>Customer Support</h1>
+                            <p>Need assisstance? Found a bug? We are here to help</p>
+                        </div>
+                        <div class="hlpprocess">
+                           <div class="helpform1">
+                                <h3>Category</h3>
+                                <div class="catbx">
+                                    <div class="catvis">
+                                        <span id="cattitle">Select a category</span>
+                                        <i class="fa-solid fa-caret-down rtd"></i>
+                                    </div>
+                                    <div class="catopt">
+                                        <div class="cgy cga" id="cgy1">
+                                            <p><i class="fa-solid fa-map-location"></i>&nbsp;&nbsp;Guidance</p>
+                                        </div>
+                                        <div class="cgy cgb" id="cgy2">
+                                            <p><i class="fa-solid fa-info-circle"></i>&nbsp;&nbsp;Information</p>
+                                        </div>
+                                        <div class="cgy cga" id="cgy3">
+                                            <p><i class="fa-solid fa-bug"></i>&nbsp;&nbsp;Bugs</p>
+                                        </div>
+                                        <label for="othcat" class="cgy cgb" id="cgy4">
+                                            <p><i class="fa-solid fa-dot-circle"></i>&nbsp;&nbsp;Other</p>
+                                        </label>
+                                        <!-- <br> -->
+                                        <div class="entrnom">
+                                            <input id="othcat" type="text" placeholder="enter a suitable name">
+                                            <button><i class="fa-solid fa-check cert"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="helpform2">
+                                <h3>Describe your issue</h3>
+                                <div class="descprob">
+                                    <input type="text" name="" id="descid">
+                                    <!-- <div class="descbx"></div> -->
+                                    <label for="descid" id="xx" class="descbx"><span id="desclbl">Click to type</span><span class="lblpoint">&nbsp;|&nbsp;</span></label>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="sbtform">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+
+
+        <!-- script -->
+        <script src="Uvid-script.js"></script>
+
+
+
+
+
+    </body>
+</html>

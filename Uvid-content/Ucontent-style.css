@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    background: transparent;
+    border-radius: 10px;
+    width: 12px;
+}
+
+::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #1a5c17;
+    /* border: 5px solid #000; */
+    border-radius: 10px;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Berlin Sans FB';
+    background-color: #000;
+    overflow: hidden;
+}
+
+
+.srchbody{
+    background: #1f1d1d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------preloader----------------- */
+#preloader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1.0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition:all 2s ease-out;
+    z-index: 10000000000000;
+}
+
+#spinner{
+    width: 100px;
+    height: 100px;
+    /* margin: 30px; */
+    border: 18px solid #b1b1b1;
+    border-radius: 50%;
+    border-top: 18px solid #21c92cb8;
+    animation: spi 1000ms reverse infinite;
+}
+
+
+@keyframes spi{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------NAVBAR-------------- */
+
+.navbar{
+    padding: 0 10px;
+    width: 100%;
+    height: 70px;
+    background-color: #2f2e2e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #2f2e2e;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.logo .lhead{
+    font-size: 40px;
+    color: #14d60d;
+}
+
+.logo .lname{
+    font-size: 25px;
+    color: #fff;
+}
+
+.headname h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headname h1 .hd1{
+    font-size: 35px;
+    color: #b1b1b1;
+}
+
+.headname h1 .hd2{
+    font-size: 25px;
+    color: #14d60d;
+}
+
+.icnsets{
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.icnsets i{
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0px 10px;
+    transition: all 300ms ease-in-out;
+}
+
+.icnsets i:hover{
+    color: #14d60d;
+}
+
+.baron{
+    display: none!important;
+}
+
+.icnopener{
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    width: 100%;
+    padding: 0 10px;
+}
+
+.searchcontainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: flex;
+    transition: all 200ms ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.srchatv{
+    visibility: visible;
+    opacity: 1;
+}
+
+.closesearchctn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    margin: 15px;
+    color: #abaaaa;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.closesearchctn:hover{
+    color: #e7e7e7;
+}
+
+.searchsub1{
+    width: 45%;
+    height: 0%;
+    background: #1f1d1d;
+    transition: all 600ms ease-in-out;
+}
+
+.frameatv{
+    height: 100%;
+}
+
+.searchsub2{
+    width: 55%;
+    height: 100%;
+    background: #000000d2;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 640px)
+{
+
+    .icnsets{
+        display: flex;
+        column-gap: 20px;
+    }
+    
+    .baron{
+        display: flex!important;
+    }
+
+    .baroff{
+        display: none!important;
+    }
+
+    .menicnatv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #2f2e2e;
+    }
+
+    .searchsub1{
+        width: 55%;
+    }
+
+    .searchsub2{
+        width: 45%;
+    }
+}
+
+
+@media only screen and (max-width: 427px)
+{
+    .searchsub1{
+        width: 85%;
+    }
+
+    .searchsub2{
+        width: 15%;
+    }
+}
+
+
+
+
+
